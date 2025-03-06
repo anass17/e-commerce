@@ -12,7 +12,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(User::all());
     }
 
     /**
@@ -21,6 +21,7 @@ class UserController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**
