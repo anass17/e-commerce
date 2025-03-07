@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { TextField, Button, FormControl, InputLabel, Select, MenuItem, Checkbox, FormControlLabel, Grid2, Container, Typography } from '@mui/material';
 
-function LoginForm() {
+function LoginForm({setUser}) {
+
+  const [error, setError] = useState(null);
+
   const [formData, setFormData] = useState({
-    email: ''
+    email: '',
+    password: ''
   });
 
   const handleChange = (e) => {
