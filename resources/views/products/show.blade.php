@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('content')
 <div class="container mx-auto py-6 px-5">
@@ -41,11 +41,11 @@
         <div class="col-span-1 md:col-span-3">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($products as $product)
-                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <a class="bg-white p-4 rounded-lg shadow-lg block" href="/products/{{ $product->id }}">
                         <h5 class="text-xl font-semibold mb-2">{{ $product->name }}</h5>
                         <p class="text-gray-600 mb-2">{{ $product->description }}</p>
                         <p class="text-blue-600 font-semibold">{{ $product->price }}</p>
-                    </div>
+                    </a>
                 @endforeach
             </div>
         </div>
