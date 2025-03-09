@@ -13,6 +13,8 @@ class UserController extends Controller
     public function index()
     {
         return response()->json(User::all());
+        // return view('welcome');
+        // return response()->json(['csrf_token' => csrf_token()]);
     }
 
     /**

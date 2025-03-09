@@ -9,6 +9,8 @@ use App\User;
 class AuthController extends Controller
 {
     public function register(Request $request) {
-        return User::register($request);
+        $response = User::register($request);
+
+        echo json_encode($response);
     }
 }
